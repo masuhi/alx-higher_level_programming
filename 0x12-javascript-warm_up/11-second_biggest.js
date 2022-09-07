@@ -1,18 +1,13 @@
 #!/usr/bin/node
-const args = process.argv;
-let bigest = 0;
-let secBig = 0;
-let num;
-if (process.argv.length < 4) {
-  console.log('0');
-} else {
-  for (let i = 2; i < args.length; i++) {
-    num = parseInt(args[i]);
-    if (num > bigest) {
-      secBig = bigest;
-      bigest = num;
-    } else if (num > secBig) {
-      secBig = num;
-    }
-  }
-  console.log(secBig
+
+const { argv } = require('process');
+const args = argv.slice(2);
+let result = 0;
+let finalArray = [];
+
+if (args.length > 1) {
+  finalArray = [...new Set(args.map((e) => parseInt(e)).sort((a, b) => b - a))];
+  result = finalArray.length > 1 ? finalArray[1] : finalArray[0];
+}
+
+console.log(result);
