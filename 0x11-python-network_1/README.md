@@ -1,12 +1,13 @@
-#!/usr/bin/python3
-"""Displays the X-Request-Id header variable of a request to a given URL
-"""
-import sys
-import requests
+# 0x11-python-network_1
 
+### In this project, I leart about:
+- How to fetch internet resources with the Python package urllib
+- How to decode urllib body response
+- How to use the Python package requests #requestsiswaysimplerthanurllib
+- How to make HTTP GET request
+- How to make HTTP POST/PUT/etc. request
+- How to fetch JSON resources
+- How to manipulate data from an external service
 
-if __name__ == "__main__":
-    url = sys.argv[1]
-
-    r = requests.get(url)
-    print(r.headers.get("X-Request-Id"))
+### Resources used
+- [Python Documentation](https://docs.python.org/3/howto/urllib2.html)
