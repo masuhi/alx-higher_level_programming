@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""A script that
-- fetches https://intranet.hbtn.io/status.
-- uses urlib package
-"""
+'''task 0 script'''
 
 
 if __name__ == '__main__':
